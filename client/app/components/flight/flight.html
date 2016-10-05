@@ -1,0 +1,37 @@
+<h1 class="flight-title">
+  Your Trip<br />
+  <span>to {{::$ctrl.flight.arrivalAirport}}</span>
+</h1>
+<div class="block flight-details">
+  <div class="flight-details-date">
+    {{::$ctrl.flight.localDepartureTime | date}}
+  </div>
+  <div class="flight-details-airport">
+    {{::$ctrl.flight.departureAirport}}<br />
+    to {{::$ctrl.flight.arrivalAirport}}
+  </div>
+  <div class="flight-details-time">
+    Dep {{::$ctrl.flight.localDepartureTime | date : 'h:mm a'}}
+    - Arr {{::$ctrl.flight.localArrivalTime | date : 'h:mm a'}}
+  </div>
+  <div class="flight-details-flight">
+    Flight {{::$ctrl.flight.flightNumber.carrierCode}}{{::$ctrl.flight.flightNumber.number}}
+  </div>
+  <div class="flight-details-seats">
+    {{::$ctrl.flightList.filterState.seats.adult}} Adult
+    <span>{{::$ctrl.flightList.filterState.seats.adult}} x ${{$ctrl.flight.prices.adult[$ctrl.payment.value]}}</span>
+  </div>
+  <div class="flight-details-seats" ng-if="$ctrl.flightList.filterState.seats.child">
+    {{$ctrl.flightList.filterState.seats.child}} Child
+    <span>{{$ctrl.flightList.filterState.seats.child}} x ${{$ctrl.flight.prices.child[$ctrl.payment.value]}}</span>
+  </div>
+</div>
+<div class="final-price">
+  Final Price ${{$ctrl.flight.total[$ctrl.payment.value]}}
+</div>
+<div class="select-payment">
+  <label ng-repeat="payment in ::$ctrl.payments">
+    <input type="radio" name="payment" ng-model="$ctrl.payment" ng-value="payment" />
+    Pay by {{::payment.name}}: ${{::$ctrl.flight.total[payment.value]}}
+  </label>
+</div>

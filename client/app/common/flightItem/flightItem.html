@@ -1,0 +1,5 @@
+<div class="flight-item" ng-click="$ctrl.goFlight($ctrl.flight.id)">
+  <span class="flight-item-price">${{::$ctrl.flight.prices.adult.valueWithDebitCard}}</span>
+  <span class="flight-item-time">Dep {{::$ctrl.flight.localDepartureTime | date : 'h:mm a'}}</span>
+  <span class="flight-item-time">Arr {{::$ctrl.flight.localArrivalTime | date : 'h:mm a'}}</span>
+</div>

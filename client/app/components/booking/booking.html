@@ -1,0 +1,13 @@
+<h1>Choose your flight</h1>
+<filter-form></filter-form>
+<div class="block flight-list">
+  <h2>Outbound <span>journey</span></h2>
+  <h3>{{$ctrl.flightList.filterState.departureAirport.name}} <span>to {{$ctrl.flightList.filterState.arrivalAirport.name}}</span></h3>
+  <div ng-if="$ctrl.flightList.filteredList.length">
+    <flight-item ng-repeat="flight in $ctrl.flightList.filteredList" flight="flight"></flight-item>
+    <div class="clearfix"></div>
+  </div>
+  <div class="error" ng-if="!$ctrl.flightList.filteredList.length">
+    No flights was found
+  </div>
+</div>

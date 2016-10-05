@@ -1,0 +1,65 @@
+<div class="block search-form">
+  <form ng-submit="$ctrl.flightList.filter($ctrl.filterState)">
+    <div class="col">
+      <div class="form-control">
+        <label>Flying from <span>*</span></label>
+        <select
+          required
+          ng-model="$ctrl.filterState.departureAirport"
+          ng-options="option.name for option in ::$ctrl.departure_airports track by option.value">
+        </select>
+      </div>
+      <div class="form-control">
+        <label>Going to <span>*</span></label>
+        <select
+          required
+          ng-model="$ctrl.filterState.arrivalAirport"
+          ng-options="option.name for option in ::$ctrl.arrival_airports track by option.value">
+        </select>
+      </div>
+    </div>
+    <div class="col">
+      <div class="form-control">
+        <label>Outbound <span>*</span></label>
+        <select
+          required
+          ng-model="$ctrl.filterState.localDepartureDay"
+          ng-options="option.name for option in ::$ctrl.days track by option.value">
+        </select>
+        <select
+          required
+          ng-model="$ctrl.filterState.localDepartureMonth"
+          ng-options="option.name for option in ::$ctrl.months track by option.value">
+        </select>
+      </div>
+      <div class="form-control">
+        <label>Price to, $</label>
+        <input
+          type="number"
+          ng-model="$ctrl.filterState.priceTo" />
+      </div>
+    </div>
+    <div class="col">
+      <div class="form-control">
+        <label>Adults <span>*</span></label>
+        <input
+          type="number"
+          required
+          min="1"
+          ng-model="$ctrl.filterState.seats.adult" />
+      </div>
+      <div class="form-control">
+        <label>Children</label>
+        <input
+          type="number"
+          min="0"
+          ng-model="$ctrl.filterState.seats.child" />
+      </div>
+    </div>
+    <div class="clearfix"></div>
+    <hr />
+    <div align="right">
+      <button type="submit">Show Flights</button>
+    </div>
+  </form>
+</div>

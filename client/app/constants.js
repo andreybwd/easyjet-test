@@ -1,4 +1,4 @@
-export const API_URL = "http://ejtestbed.herokuapp.com/flights";
+export const API_URL = "https://ejtestbed.herokuapp.com/flights";
 
 let dates = [];
 for (let i = 1; i <= 31; i++) {

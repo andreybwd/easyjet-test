@@ -37,7 +37,7 @@ export default class FlightList {
     }
 
     for (let payment_type in total) {
-      total[payment_type] = parseFloat(parseFloat(total[payment_type]).toFixed(2));
+      total[payment_type] = parseFloat(total[payment_type]).toFixed(2);
     }
 
     return total;

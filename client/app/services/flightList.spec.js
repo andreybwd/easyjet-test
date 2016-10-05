@@ -109,9 +109,9 @@ describe('FlightList service', () => {
     it('correctly handle getFlightTotal with default filterState', () => {
       let item = {};
       let totalAfter = {
-        "value": 27.99,
-        "valueWithDebitCard": 40.99,
-        "valueWithCreditCard": 41.81
+        "value": "27.99",
+        "valueWithDebitCard": "40.99",
+        "valueWithCreditCard": "41.81"
       }
 
       let total = flightList.getFlightTotal(flightListMock[0]);
@@ -121,9 +121,9 @@ describe('FlightList service', () => {
     it('correctly handle getFlightTotal with custom filterState', () => {
       let item = {};
       let totalAfter = {
-        "value": 140.97,
-        "valueWithDebitCard": 179.97,
-        "valueWithCreditCard": 183.57
+        "value": "140.97",
+        "valueWithDebitCard": "179.97",
+        "valueWithCreditCard": "183.57"
       }
 
       flightList.filterState.seats = {adult : 2, child : 1};

@@ -4,7 +4,9 @@ class BookingController {
 
     this.flightList   = flightList;
 
-    this.flightList.load();
+    this.$onInit = () => {
+      this.flightList.load();
+    }
   }
 }
 

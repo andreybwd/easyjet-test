@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6da3889b-a3ec-4f31-95a5-6745330c29d3" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/components/booking/booking.controller.js" afterPath="$PROJECT_DIR$/client/app/components/booking/booking.controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/services/flightList.js" afterPath="$PROJECT_DIR$/client/app/services/flightList.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/karma.conf.js" afterPath="$PROJECT_DIR$/karma.conf.js" />
-    </list>
+    <list default="true" id="6da3889b-a3ec-4f31-95a5-6745330c29d3" name="Default" comment="" />
     <ignored path="easyjet-test.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -467,12 +462,12 @@
       <updated>1475487524840</updated>
       <workItem from="1475487526418" duration="19394000" />
       <workItem from="1475566980230" duration="23623000" />
-      <workItem from="1475646359313" duration="19774000" />
+      <workItem from="1475646359313" duration="19867000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="62791000" />
+    <option name="totallyTimeSpent" value="62884000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1924" height="1056" extended-state="0" />
